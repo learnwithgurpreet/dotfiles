@@ -17,9 +17,9 @@ alias work="cd ~/codebase/work"
 alias status="git status"
 alias pull="git pull origin"
 alias cb="cd ~/codebase/work/poc/carlsberg-frontend-poc"
-alias ls="colorls"
-alias ll="colorls -l"
-alias l="colorls -l -a"
+alias ls="lsd"
+alias ll="lsd -l"
+alias l="lsd -l -a"
 
 # alt + left/right: jump one word backward/forward
 bindkey '^[^[[D' emacs-backward-word
