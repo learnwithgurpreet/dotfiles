@@ -1,0 +1,82 @@
+{
+  "[css]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.sort.json": "always"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": {
+      "source.sort.json": "never"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "apc.electron": {
+    "titleBarStyle": "hidden"
+  },
+  "apc.stylesheet": {
+    "*": "font-family: Dank Mono, monospace"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 19,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedLocales": {
+    "cs": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.format.enable": true,
+  "files.associations": {
+    "package.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
+    "_site": false,
+    "coverage": true,
+    "**/dist": false,
+    "**/node_modules": false
+  },
+  "git.ignoreMissingGitWarning": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "redhat.telemetry.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 14,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "update.showReleaseNotes": false,
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
+  "window.zoomLevel": 1,
+  "workbench.colorCustomizations": {
+    "[Catppuccin Frappé]": {
+      "gitlens.decorations.ignoredForegroundColor": "#737994"
+    }
+  },
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none"
+}
