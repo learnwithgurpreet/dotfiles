@@ -16,6 +16,7 @@ export LANG=en_US.UTF-8
 alias work="cd ~/codebase/work"
 alias status="git status"
 alias pull="git pull origin"
+alias checkout="git checkout "
 alias cb="cd ~/codebase/work/poc/carlsberg-frontend-poc"
 alias ls="lsd"
 alias ll="lsd -l"
