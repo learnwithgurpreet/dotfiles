@@ -4,7 +4,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh)"
 
 # Prompt
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.json)"
 
 # Auto Suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
