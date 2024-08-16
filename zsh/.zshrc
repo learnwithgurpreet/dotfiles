@@ -4,8 +4,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(oh-my-posh init zsh)"
 
 # Prompt
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.json)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.json)"
 
 # Auto Suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -18,7 +18,7 @@ alias work="cd ~/codebase/work"
 alias status="git status"
 alias pull="git pull origin"
 alias checkout="git checkout "
-alias cb="cd ~/codebase/work/poc/carlsberg-frontend-poc"
+alias cb="cd ~/codebase/work/projects/PS_frontend_1901"
 alias ls="lsd"
 alias ll="lsd -l"
 alias l="lsd -l -a"
