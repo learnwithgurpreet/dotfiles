@@ -1,25 +1,4 @@
 {
-  "[css]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[json]": {
-    "editor.codeActionsOnSave": {
-      "source.sort.json": "always"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.codeActionsOnSave": {
-      "source.sort.json": "never"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[python]": {
-    "editor.formatOnType": true
-  },
   "apc.electron": {
     "titleBarStyle": "hidden"
   },
@@ -27,7 +6,6 @@
     "*": "font-family: Dank Mono, monospace"
   },
   "editor.accessibilitySupport": "off",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 19,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
@@ -78,5 +56,8 @@
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
