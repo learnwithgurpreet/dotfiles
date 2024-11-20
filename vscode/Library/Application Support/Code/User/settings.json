@@ -6,7 +6,7 @@
     "*": "font-family: Dank Mono, monospace"
   },
   "editor.accessibilitySupport": "off",
-  "editor.fontSize": 19,
+  "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
