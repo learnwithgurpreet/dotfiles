@@ -40,14 +40,9 @@
   "window.customTitleBarVisibility": "auto",
   "window.titleBarStyle": "native",
   "window.zoomLevel": 1,
-  "workbench.colorCustomizations": {
-    "[Catppuccin Frappé]": {
-      "gitlens.decorations.ignoredForegroundColor": "#737994"
-    }
-  },
-  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.colorTheme": "Aura Dracula Spirit (Soft)",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.iconTheme": "catppuccin-frappe",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
