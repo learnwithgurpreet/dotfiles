@@ -24,7 +24,7 @@ final_space = true
     style = 'plain'
 
   [[blocks.segments]]
-    template = ' {{ .Path }} '
+    template = ' {{ .Folder }} '
     foreground = 'blue'
     background = 'transparent'
     type = 'path'
