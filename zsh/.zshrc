@@ -1,11 +1,13 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Oh My Posh
-eval "$(oh-my-posh init zsh)"
+# Starship Setup
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init zsh)"
 
-# Prompt
+# Oh My Posh (if starship is not used)
+# eval "$(oh-my-posh init zsh)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/jblab_2021.omp.json)"
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/jblab_2021.omp.json)"
 
 # Auto Suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

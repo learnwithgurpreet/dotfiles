@@ -24,7 +24,7 @@
     "**/CVS": true,
     "**/Thumbs.db": true,
     "_site": false,
-    "coverage": true,
+    "coverage": false,
     "**/dist": false,
     "**/node_modules": false
   },
@@ -40,7 +40,6 @@
   "window.customTitleBarVisibility": "auto",
   "window.titleBarStyle": "native",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Aura Dracula Spirit (Soft)",
   "workbench.editor.empty.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.editor": "json",
