@@ -58,4 +58,4 @@ else
 fi
 
 # Show system information
-neofetch
+fastfetch
