@@ -49,13 +49,13 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH=$(yarn global bin):$PATH
 
-# check node version
-echo "Current Node.js: $(node -v)"
-echo "Current npm version: $(npm -v)"
+if [ -f $PWD/.nvmrc ]; then
+  # Load the version specified in .nvmrc if it exists
+  nvm use
+else
+  # Fallback to default
+  nvm use default
+fi
 
-# Fallback to default .npmrc version
-nvm use
-
-# Switching to project specific node version
-echo "Switched to Node.js: $(node -v)"
-echo "Switched to npm: $(npm -v)"
+# Show system information
+neofetch
