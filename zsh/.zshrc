@@ -16,15 +16,11 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export LANG=en_US.UTF-8
 
 # Alias Section
-alias work="cd ~/codebase/work"
-alias status="git status"
-alias pull="git pull origin"
-alias checkout="git checkout "
 alias cb="cd ~/codebase/work/projects/project-1901-app-code"
 alias dotfiles="cd ~/codebase/personal/git/dotfiles"
 alias ls="lsd"
 alias ll="lsd -l"
-alias l="lsd -l -a"
+alias lla="lsd -l -a"
 
 # alt + left/right: jump one word backward/forward
 bindkey '^[^[[D' emacs-backward-word
