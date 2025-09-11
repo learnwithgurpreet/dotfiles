@@ -52,6 +52,3 @@ else
   # Fallback to default
   nvm use default
 fi
-
-# Show system information
-fastfetch
