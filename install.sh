@@ -2,6 +2,43 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Ensure Homebrew is installed
+if ! command -v brew &> /dev/null; then
+    echo "[!] Homebrew is not installed. Please install Homebrew first."
+    exit 1
+fi
+
+# Ensure stow is installed
+if ! command -v stow &> /dev/null; then
+    echo "[!] GNU Stow is not installed. Installing with Homebrew..."
+    brew install stow
+fi
+
+# Ensure zsh is default shell
+if [ "$SHELL" != "/bin/zsh" ]; then
+    echo "[!] Changing default shell to zsh..."
+    chsh -s /bin/zsh
+fi
+
+# Ensure starship is installed
+if ! command -v starship &> /dev/null; then
+    echo "[!] Starship is not installed. Installing with Homebrew..."
+    brew install starship
+fi
+
+# Ensure fastfetch is installed
+if ! command -v fastfetch &> /dev/null; then
+    echo "[!] Fastfetch is not installed. Installing with Homebrew..."
+    brew install fastfetch
+fi
+
+# Ensure nvm is installed
+if [ ! -d "$HOME/.nvm" ]; then
+    echo "[!] NVM is not installed. Installing with Homebrew..."
+    brew install nvm
+    mkdir -p "$HOME/.nvm"
+fi
+
 # Dotfolders from repo root (flattened vscode layout, no Library/ path)
 DOT_FOLDERS="vscode,zsh"
 
