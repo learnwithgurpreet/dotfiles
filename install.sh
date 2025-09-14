@@ -2,6 +2,12 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# Ensure zsh is default shell
+if [ "$SHELL" != "/bin/zsh" ]; then
+    echo "[!] Changing default shell to zsh..."
+    chsh -s /bin/zsh
+fi
+
 # Ensure Homebrew is installed
 if ! command -v brew &> /dev/null; then
     echo "[!] Homebrew is not installed. Please install Homebrew first."
@@ -12,12 +18,6 @@ fi
 if ! command -v stow &> /dev/null; then
     echo "[!] GNU Stow is not installed. Installing with Homebrew..."
     brew install stow
-fi
-
-# Ensure zsh is default shell
-if [ "$SHELL" != "/bin/zsh" ]; then
-    echo "[!] Changing default shell to zsh..."
-    chsh -s /bin/zsh
 fi
 
 # Ensure starship is installed
@@ -74,14 +74,3 @@ done
 # Reload shell
 echo "[+] Reloading shell..."
 exec $SHELL -l
-
-# for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
-#     echo "[+] Folder :: $folder"
-#     stow --ignore=README.md --ignore=LICENSE \
-#         -t $HOME -D $folder
-#     stow -v -t $HOME $folder
-# done
-
-# # Reload shell once installed
-# echo "[+] Reloading shell..."
-# exec $SHELL -l
