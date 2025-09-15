@@ -4,23 +4,35 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
-# Oh My Posh (if starship is not used)
-# eval "$(oh-my-posh init zsh)"
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/jblab_2021.omp.json)"
-
 # Auto Suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Alias Section
+# Aliases: Projects
 alias cb="cd ~/codebase/work/projects/project-1901-app-code"
 alias dotfiles="cd ~/codebase/personal/git/dotfiles"
+
+# Aliases: Directory listing with lsd
 alias ls="lsd"
 alias ll="lsd -l"
 alias lla="lsd -l -a"
+
+# Aliases: Git
+alias gs="git status --short"
+
+alias ga="git add"
+alias gc="git commit"
+
+alias gp="git push"
+alias gu="git pull"
+
+alias gl="git log --oneline --graph --all --decorate"
+alias gb="git branch"
+
+alias gi="git init"
+alias gcl="git clone"
 
 # alt + left/right: jump one word backward/forward
 bindkey '^[^[[D' emacs-backward-word
