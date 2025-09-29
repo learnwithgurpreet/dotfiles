@@ -51,8 +51,8 @@ export PATH=$(yarn global bin):$PATH
 
 if [ -f $PWD/.nvmrc ]; then
   # Load the version specified in .nvmrc if it exists
-  nvm use
+  nvm use --silent
 else
   # Fallback to default
-  nvm use default
+  nvm use --silent default
 fi

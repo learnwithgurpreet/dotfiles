@@ -1,0 +1,9 @@
+anaconda
+brave-browser
+chromium
+iterm2
+localsend
+rectangle
+zoom
+google-chrome
+visual-studio-code

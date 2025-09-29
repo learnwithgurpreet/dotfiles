@@ -10,33 +10,55 @@ fi
 
 # Ensure Homebrew is installed
 if ! command -v brew &> /dev/null; then
-    echo "[!] Homebrew is not installed. Please install Homebrew first."
-    exit 1
+    echo "[!] Homebrew is not installed. Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    
+    # Add Homebrew to PATH for current session if needed
+    if [ -d "/opt/homebrew/bin" ]; then
+        export PATH="/opt/homebrew/bin:$PATH"
+    elif [ -d "/usr/local/bin" ]; then
+        export PATH="/usr/local/bin:$PATH"
+    fi
+    if ! command -v brew &> /dev/null; then
+        echo "[!] Homebrew installation failed. Please install manually."
+        exit 1
+    fi
 fi
 
-# Ensure stow is installed
-if ! command -v stow &> /dev/null; then
-    echo "[!] GNU Stow is not installed. Installing with Homebrew..."
-    brew install stow
+# Install all brew packages from brew-packages.txt
+BREW_PACKAGES_FILE="$SCRIPT_DIR/brew-packages.txt"
+if [ -f "$BREW_PACKAGES_FILE" ]; then
+    echo "[+] Installing Homebrew packages from $BREW_PACKAGES_FILE..."
+    while IFS= read -r pkg; do
+        if [ -n "$pkg" ]; then
+            if ! brew list "$pkg" &> /dev/null; then
+                echo "    -> Installing $pkg..."
+                brew install "$pkg"
+            else
+                echo "    -> $pkg already installed."
+            fi
+        fi
+    done < "$BREW_PACKAGES_FILE"
+else
+    echo "[!] brew-packages.txt not found. Skipping bulk Homebrew package install."
 fi
 
-# Ensure starship is installed
-if ! command -v starship &> /dev/null; then
-    echo "[!] Starship is not installed. Installing with Homebrew..."
-    brew install starship
-fi
-
-# Ensure fastfetch is installed
-if ! command -v fastfetch &> /dev/null; then
-    echo "[!] Fastfetch is not installed. Installing with Homebrew..."
-    brew install fastfetch
-fi
-
-# Ensure nvm is installed
-if [ ! -d "$HOME/.nvm" ]; then
-    echo "[!] NVM is not installed. Installing with Homebrew..."
-    brew install nvm
-    mkdir -p "$HOME/.nvm"
+# Install all brew casks from brew-casks.txt
+BREW_CASKS_FILE="$SCRIPT_DIR/brew-casks.txt"
+if [ -f "$BREW_CASKS_FILE" ]; then
+    echo "[+] Installing Homebrew casks from $BREW_CASKS_FILE..."
+    while IFS= read -r cask; do
+        if [ -n "$cask" ]; then
+            if ! brew list --cask "$cask" &> /dev/null; then
+                echo "    -> Installing $cask (cask)..."
+                brew install --cask "$cask"
+            else
+                echo "    -> $cask (cask) already installed."
+            fi
+        fi
+    done < "$BREW_CASKS_FILE"
+else
+    echo "[!] brew-casks.txt not found. Skipping bulk Homebrew cask install."
 fi
 
 # Dotfolders from repo root (flattened vscode layout, no Library/ path)
