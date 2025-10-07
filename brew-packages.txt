@@ -163,3 +163,4 @@ zimg
 zsh
 zsh-autosuggestions
 zstd
+http-server
