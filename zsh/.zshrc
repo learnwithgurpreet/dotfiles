@@ -64,3 +64,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# Added by Antigravity
+export PATH="/Users/gursingh7/.antigravity/antigravity/bin:$PATH"
+
+# add dart pub cache to path
+export PATH="$PATH":"$HOME/.pub-cache/bin"
