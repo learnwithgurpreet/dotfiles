@@ -93,6 +93,8 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
     fi
 done
 
+source "$SCRIPT_DIR/install-ext.sh"
+
 # Reload shell
 echo "[+] Reloading shell..."
 exec $SHELL -l
