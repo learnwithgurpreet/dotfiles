@@ -58,5 +58,6 @@
   },
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte"
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.navigationControl.enabled": false
 }
