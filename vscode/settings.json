@@ -59,5 +59,8 @@
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
-  "workbench.navigationControl.enabled": false
+  "workbench.navigationControl.enabled": false,
+  "chat.tools.terminal.autoApprove": {
+    "pnpm": true
+  }
 }

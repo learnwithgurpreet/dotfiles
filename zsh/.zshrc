@@ -1,5 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# FYI: $HOME is equal to /Users/gursingh7
+
 # Starship Setup
 export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
@@ -36,7 +38,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export PATH=/Users/gursingh7/development/apache-maven-3.8.4/bin:$PATH
+export PATH="$HOME/development/apache-maven-3.8.4/bin:$PATH"
 
 # Importing Python
 PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
@@ -58,7 +60,7 @@ else
 fi
 
 # pnpm
-export PNPM_HOME="/Users/gursingh7/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -66,7 +68,14 @@ esac
 # pnpm end
 
 # Added by Antigravity
-export PATH="/Users/gursingh7/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # add dart pub cache to path
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
