@@ -22,11 +22,14 @@ alias ll="lsd -l"
 alias lla="lsd -l -a"
 
 # Aliases: Git
-alias status="git status --short"
-
-alias pull="git pull"
-
-alias log="git log --oneline --graph --all --decorate"
+alias ga="git add"
+alias gaa="git add --all"
+alias gst="git status --short"
+alias gcf="git config --list"
+alias gcm="git commit -m"
+alias gp="git push"
+alias gl="git pull"
+alias glg="git log --oneline --graph --all --decorate"
 
 # alt + left/right: jump one word backward/forward
 bindkey '^[^[[D' emacs-backward-word

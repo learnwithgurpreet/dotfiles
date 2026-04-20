@@ -64,5 +64,10 @@
   "workbench.navigationControl.enabled": false,
   "chat.tools.terminal.autoApprove": {
     "pnpm": true
-  }
+  },
+  "terminal.integrated.initialHint": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "chat.viewSessions.orientation": "stacked"
 }
