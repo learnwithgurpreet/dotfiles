@@ -29,6 +29,7 @@ alias gcf="git config --list"
 alias gcm="git commit -m"
 alias gp="git push"
 alias gl="git pull"
+alias gs="git switch"
 alias glg="git log --oneline --graph --all --decorate"
 
 # alt + left/right: jump one word backward/forward

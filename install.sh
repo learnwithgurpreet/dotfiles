@@ -33,7 +33,7 @@ if [ -f "$BREW_PACKAGES_FILE" ]; then
         if [ -n "$pkg" ]; then
             if ! brew list "$pkg" &> /dev/null; then
                 echo "    -> Installing $pkg..."
-                brew install "$pkg"
+                brew install "$pkg" < /dev/null
             else
                 echo "    -> $pkg already installed."
             fi
@@ -51,7 +51,7 @@ if [ -f "$BREW_CASKS_FILE" ]; then
         if [ -n "$cask" ]; then
             if ! brew list --cask "$cask" &> /dev/null; then
                 echo "    -> Installing $cask (cask)..."
-                brew install --cask "$cask"
+                brew install --cask "$cask" < /dev/null
             else
                 echo "    -> $cask (cask) already installed."
             fi

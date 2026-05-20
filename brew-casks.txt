@@ -7,3 +7,4 @@ rectangle
 zoom
 google-chrome
 visual-studio-code
+font-hack-nerd-font

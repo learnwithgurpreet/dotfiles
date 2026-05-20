@@ -63,7 +63,8 @@
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.navigationControl.enabled": false,
   "chat.tools.terminal.autoApprove": {
-    "pnpm": true
+    "pnpm": true,
+    "npx jest": true
   },
   "terminal.integrated.initialHint": false,
   "[jsonc]": {
