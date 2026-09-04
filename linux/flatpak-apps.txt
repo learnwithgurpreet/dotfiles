@@ -1,0 +1,10 @@
+# GUI apps that have no good native deb, installed from Flathub.
+# Mirrors macos/brew-casks.txt.
+#
+# brave-browser        -> native apt repo, handled in install.sh
+# visual-studio-code   -> native apt repo, handled in install.sh
+# iterm2               -> Konsole (ships with TUXEDO OS, no install needed)
+# rectangle            -> KWin tiling + custom shortcuts, see kde/README.md
+# font-hack-nerd-font  -> fonts.sh
+
+us.zoom.Zoom

@@ -1,85 +1,16 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# ~/.zshrc - thin loader. Everything real lives in ~/.config/zsh/
+ZDOTDIR_CONF="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
-# FYI: $HOME is equal to /Users/gursingh7
-
-# Starship Setup
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
-
-# Auto Suggestions
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Aliases: Projects
-alias cb="cd ~/codebase/work/projects/project-1901-app-code"
-alias dotfiles="cd ~/codebase/personal/git/dotfiles"
-
-# Aliases: Directory listing with lsd
-alias ls="lsd"
-alias ll="lsd -l"
-alias lla="lsd -l -a"
-
-# Aliases: Git
-alias ga="git add"
-alias gaa="git add --all"
-alias gst="git status --short"
-alias gcf="git config --list"
-alias gcm="git commit -m"
-alias gp="git push"
-alias gl="git pull"
-alias gs="git switch"
-alias glg="git log --oneline --graph --all --decorate"
-
-# alt + left/right: jump one word backward/forward
-bindkey '^[^[[D' emacs-backward-word
-bindkey '^[^[[C' emacs-forward-word
-
-# NVM configuration
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-export PATH="$HOME/development/apache-maven-3.8.4/bin:$PATH"
-
-# Importing Python
-PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
-
-# Chromium path for Puppeteer
-export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-export PUPPETEER_EXECUTABLE_PATH=`which chromium`
-
-# Flutter
-export PATH="$PATH:$HOME/flutter/bin"
-export PATH=$(yarn global bin):$PATH
-
-if [ -f $PWD/.nvmrc ]; then
-  # Load the version specified in .nvmrc if it exists
-  nvm use --silent
-else
-  # Fallback to default
-  nvm use --silent default
-fi
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+# 1. platform specific bits first (paths, package manager env)
+case "$(uname -s)" in
+  Darwin) [ -f "$ZDOTDIR_CONF/macos.zsh" ] && source "$ZDOTDIR_CONF/macos.zsh" ;;
+  Linux)  [ -f "$ZDOTDIR_CONF/linux.zsh" ] && source "$ZDOTDIR_CONF/linux.zsh" ;;
 esac
-# pnpm end
 
-# Added by Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+# 2. shared config
+for f in common.zsh aliases.zsh; do
+  [ -f "$ZDOTDIR_CONF/$f" ] && source "$ZDOTDIR_CONF/$f"
+done
 
-# add dart pub cache to path
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH="$HOME/.local/bin:$PATH"
-
-# Added by Antigravity
-export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
-
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
+# 3. machine local overrides, never committed
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
