@@ -14,7 +14,6 @@
     "dbaeumer.vscode-eslint",
     "vscjava.vscode-java-pack",
     "donjayamanne.githistory",
-    "GitHub.copilot-labs",
     "GraphQL.vscode-graphql",
     "GraphQL.vscode-graphql-syntax",
     "wix.vscode-import-cost",
@@ -28,11 +27,8 @@
     "rvest.vs-code-prettier-eslint",
     "vscjava.vscode-java-dependency",
     "richie5um2.vscode-sort-json",
-    "cssho.vscode-svgviewer",
     "bradlc.vscode-tailwindcss",
     "ukoloff.win-ca",
-    "redhat.vscode-yaml",
-    "GitHub.copilot",
-    "GitHub.copilot-chat"
+    "redhat.vscode-yaml"
   ]
 }

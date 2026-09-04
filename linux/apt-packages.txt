@@ -1,0 +1,42 @@
+# Native apt packages (TUXEDO OS / Ubuntu base)
+# Mirrors macos/brew-packages.txt. Names differ where upstream differs.
+
+# --- core cli ---
+curl
+git
+gnupg
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+stow
+fzf
+ripgrep
+build-essential
+ca-certificates
+apt-transport-https
+software-properties-common
+
+# --- listing / fetch ---
+lsd                 # same name as brew; if unavailable the installer falls back to eza
+fastfetch           # in Ubuntu 24.10+; installer falls back to the PPA / neofetch
+
+# --- media + ocr ---
+ffmpeg
+tesseract-ocr
+tesseract-ocr-deu
+tesseract-ocr-eng
+
+# --- java toolchain ---
+openjdk-21-jdk      # brew "openjdk"
+maven
+
+# --- shell formatting ---
+shfmt               # if unavailable the installer uses "go install mvdan.cc/sh"
+
+# --- fonts (native, Nerd Fonts are handled separately in fonts.sh) ---
+fonts-firacode
+fonts-noto-color-emoji
+
+# --- desktop helpers (KDE native) ---
+flatpak
+plasma-browser-integration

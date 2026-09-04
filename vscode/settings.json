@@ -35,7 +35,7 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "redhat.telemetry.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font Mono', 'MesloLGS Nerd Font', monospace",
   "terminal.integrated.fontSize": 14,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "update.showReleaseNotes": false,
