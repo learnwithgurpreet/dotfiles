@@ -13,8 +13,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export LANG=en_US.UTF-8
 
 # Aliases: Projects
-alias cb="cd ~/codebase/work/projects/project-1901-app-code"
-alias dotfiles="cd ~/codebase/personal/git/dotfiles"
+alias dotfiles="cd ~/dotfiles"
 
 # Aliases: Directory listing with lsd
 alias ls="lsd"
@@ -53,7 +52,6 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
 # Flutter
 export PATH="$PATH:$HOME/flutter/bin"
-export PATH=$(yarn global bin):$PATH
 
 if [ -f $PWD/.nvmrc ]; then
   # Load the version specified in .nvmrc if it exists

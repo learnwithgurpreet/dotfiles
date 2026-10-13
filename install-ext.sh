@@ -11,7 +11,7 @@ fi
 python3 -c "import sys, json; print('\n'.join(json.load(open('$JSON_FILE'))['recommendations']))" | while read -r extension; do
     if [[ -n "$extension" ]]; then
         echo "⬇️  Installing: $extension..."
-        code --install-extension "$extension" --force
+        NODE_NO_WARNINGS=1 code --install-extension "$extension" --force
     fi
 done
 
