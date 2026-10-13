@@ -16,9 +16,7 @@ export LANG=en_US.UTF-8
 alias dotfiles="cd ~/dotfiles"
 
 # Aliases: Directory listing with lsd
-alias ls="lsd"
-alias ll="lsd -l"
-alias lla="lsd -l -a"
+alias ll="ls -lah"
 
 # Aliases: Git
 alias ga="git add"
